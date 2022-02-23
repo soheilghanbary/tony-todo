@@ -44,7 +44,7 @@ const TodoList: FC = () => {
         <span className="block dark:text-gray-300">Todos {todos.length}</span>
       </div>
       <motion.ul layout className="todo__list">
-        <AnimatePresence>
+        <AnimatePresence initial={false} presenceAffectsLayout>
           {!filters.length
             ? todos.map((todo, i) => <TodoItem key={todo.id} {...todo} />)
             : filters.map((todo, i) => <TodoItem key={todo.id} {...todo} />)}

@@ -49,6 +49,8 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
   return (
     <>
       <motion.li
+        layout
+        layoutId={id.toString()}
         variants={todoItemVariants}
         initial="hidden"
         animate="visible"
@@ -107,6 +109,7 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
             </svg>
           </button>
         </div>
+
         <AnimatePresence initial={false} exitBeforeEnter>
           {showModal && (
             <motion.div

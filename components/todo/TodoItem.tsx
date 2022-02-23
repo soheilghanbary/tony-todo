@@ -37,19 +37,20 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
   };
 
   const updateSubmit = (e: FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     updateTodos(edit);
     closeModal();
   };
 
   const closeModal = () => setShowModal(false);
 
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <>
       <motion.li
         layout
+        layoutId={id.toString()}
         variants={todoItemVariants}
         initial="hidden"
         animate="visible"
@@ -120,7 +121,8 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
             onClick={() => setShowModal(false)}
             transition={{ duration: 0.25 }}
           >
-            <motion.form onSubmit={updateSubmit}
+            <motion.form
+              onSubmit={updateSubmit}
               onClick={(e) => e.stopPropagation()}
               variants={modalVariants}
               initial="hidden"
@@ -129,7 +131,9 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
               className="modal"
               transition={{ duration: 0.25 }}
             >
-              <h1 className="text-2xl dark:text-gray-300">{t('editTitleText')}</h1>
+              <h1 className="text-2xl dark:text-gray-300">
+                {t("editTitleText")}
+              </h1>
               <input
                 type={"text"}
                 autoFocus
@@ -139,10 +143,10 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
               />
               <div className="grid grid-cols-2 gap-4">
                 <button type="submit" className="btn success">
-                  {t('updateBtnText')}
+                  {t("updateBtnText")}
                 </button>
                 <button onClick={closeModal} className="btn default">
-                  {t('cancelBtnText')}
+                  {t("cancelBtnText")}
                 </button>
               </div>
             </motion.form>

@@ -109,50 +109,50 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
             </svg>
           </button>
         </div>
-      </motion.li>
-      {/* <AnimatePresence initial={false} exitBeforeEnter>
-        {showModal && (
-          <motion.div
-            variants={backdropVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="backdrop"
-            onClick={() => setShowModal(false)}
-            transition={{ duration: 0.25 }}
-          >
-            <motion.form
-              onSubmit={updateSubmit}
-              onClick={(e) => e.stopPropagation()}
-              variants={modalVariants}
+        <AnimatePresence initial={false} exitBeforeEnter>
+          {showModal && (
+            <motion.div
+              variants={backdropVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="modal"
+              className="backdrop"
+              onClick={() => setShowModal(false)}
               transition={{ duration: 0.25 }}
             >
-              <h1 className="text-2xl dark:text-gray-300">
-                {t("editTitleText")}
-              </h1>
-              <input
-                type={"text"}
-                autoFocus
-                className="form__field"
-                value={edit.text}
-                onChange={(e) => setEdit({ ...edit, text: e.target.value })}
-              />
-              <div className="grid grid-cols-2 gap-4">
-                <button type="submit" className="btn success">
-                  {t("updateBtnText")}
-                </button>
-                <button onClick={closeModal} className="btn default">
-                  {t("cancelBtnText")}
-                </button>
-              </div>
-            </motion.form>
-          </motion.div>
-        )}
-      </AnimatePresence> */}
+              <motion.form
+                onSubmit={updateSubmit}
+                onClick={(e) => e.stopPropagation()}
+                variants={modalVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="modal"
+                transition={{ duration: 0.25 }}
+              >
+                <h1 className="text-2xl dark:text-gray-300">
+                  {t("editTitleText")}
+                </h1>
+                <input
+                  type={"text"}
+                  autoFocus
+                  className="form__field"
+                  value={edit.text}
+                  onChange={(e) => setEdit({ ...edit, text: e.target.value })}
+                />
+                <div className="grid grid-cols-2 gap-4">
+                  <button type="submit" className="btn success">
+                    {t("updateBtnText")}
+                  </button>
+                  <button onClick={closeModal} className="btn default">
+                    {t("cancelBtnText")}
+                  </button>
+                </div>
+              </motion.form>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.li>
     </>
   );
 };

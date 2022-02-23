@@ -10,15 +10,15 @@ const useTodo = () => {
     const newTodo = { id: Date.now(), text: text, isComplete: false };
     localStorage.setItem("todos", JSON.stringify([...todos, newTodo]));
     setTodos((prev) => [...prev, newTodo]);
-    toast.success("todo was added to list", {
-      position: "bottom-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "colored",
-    });
+    // return toast.success("todo was added to list", {
+    //   position: "bottom-right",
+    //   autoClose: 2000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   theme: "colored",
+    // });
   };
   const updateTodos = (updatedTodo: TodoProps) => {
     setTodos((prev) =>
@@ -28,28 +28,28 @@ const useTodo = () => {
         } else return item;
       })
     );
-    return toast.info("todo was Updated!", {
-      position: "bottom-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "colored",
-    });
+    // return toast.info("todo was Updated!", {
+    //   position: "bottom-right",
+    //   autoClose: 2000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   theme: "colored",
+    // });
   };
   const removeTodo = (id: number) => {
     const updateList = todos.filter((todo) => todo.id !== id);
     setTodos(updateList);
-    return toast.error("todo was removed on List!", {
-      position: "bottom-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "colored",
-    });
+    // return toast.error("todo was removed on List!", {
+    //   position: "bottom-right",
+    //   autoClose: 2000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   theme: "colored",
+    // });
   };
   const completeTodo = (id: number) =>
     setTodos((prev) =>

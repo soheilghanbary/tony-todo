@@ -8,7 +8,6 @@ const HomePage = () => {
     <div>
       <AddTodo />
       <TodoList />
-      <ToastContainer />
     </div>
   );
 };

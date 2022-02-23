@@ -5,9 +5,9 @@ import useTodo from "hooks/useTodo";
 import { useTranslation } from "next-i18next";
 
 const todoItemVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0.5 },
+  visible: { opacity: 1 },
+  exit: { opacity: 0 },
 };
 
 const modalVariants = {

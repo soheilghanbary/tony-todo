@@ -49,8 +49,6 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
   return (
     <>
       <motion.li
-        layout
-        layoutId={id.toString()}
         variants={todoItemVariants}
         initial="hidden"
         animate="visible"

@@ -1,0 +1,14 @@
+.form__group
+    @apply flex items-center gap-4 max-w-sm
+.form__field
+    @apply text-gray-600 dark:bg-[#30313A] dark:text-gray-300 text-lg w-full py-2 leading-9 px-4 rounded-lg bg-gray-100 duration-200
+    &:focus
+        @apply ring-2 ring-blue-500
+
+
+.select
+    @apply relative
+    &__list
+        @apply w-64 absolute mt-2 divide-y divide-gray-100 bg-white border border-gray-100 dark:border-[#25252c] dark:divide-[#25252c] dark:bg-[#30313A] rounded-md
+        li
+            @apply px-4 py-3 hover:bg-gray-100 dark:hover:bg-[#25252c] cursor-pointer duration-150 hover:pl-6

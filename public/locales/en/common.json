@@ -1,0 +1,10 @@
+{
+  "title": "React Todo App",
+  "placeholderText": "enter todo ...",
+  "addBtnText": "Add Todo",
+  "filterText": "Filter",
+  "editTitleText": "Edit Todo",
+  "changeLangText": "Change Language",
+  "cancelBtnText": "Cancel",
+  "updateBtnText": "Update"
+}

@@ -1,0 +1,43 @@
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
+// Tailwind directives
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Globals Styles
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  user-select: none;
+  font-family: "Nunito", dana;
+}
+
+body {
+  transition: background 100ms;
+  @apply dark:bg-[#1A1B21] bg-white dark:text-slate-300 text-slate-500;
+}
+
+[lang="fa"] body {
+  direction: rtl;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a1a1aa;
+  border-radius: 1rem;
+}
+
+@import "buttons";
+@import "forms";
+@import "todos";
+@import "modal";

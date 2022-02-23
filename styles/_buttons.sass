@@ -1,0 +1,20 @@
+.btn
+    @apply border-2 text-white rounded-lg px-4 py-2 leading-7 whitespace-nowrap duration-150
+    &:active
+        @apply scale-90
+    &.primary
+        @apply bg-blue-500 border-blue-500
+    &.default
+        @apply bg-gray-100 border-gray-100 text-gray-500 dark:bg-[#30313A] dark:border-[#30313A] dark:text-gray-300
+    &.icon
+        @apply flex justify-center items-center p-2
+    &.info
+        @apply bg-sky-500 border-sky-500
+    &.danger
+        @apply bg-rose-500 border-rose-500
+    &.success
+        @apply bg-teal-500 border-teal-500
+    &.warning
+        @apply bg-orange-500 border-orange-500
+    &.small
+        @apply px-4 py-2 leading-6

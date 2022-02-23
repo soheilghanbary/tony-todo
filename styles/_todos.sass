@@ -1,0 +1,9 @@
+.todo__list
+    @apply w-full items-center flex flex-col gap-4 lg:grid lg:grid-cols-3 md:grid-cols-2 md:grid
+
+.todo__item
+    @apply w-full px-4 py-3 rounded-lg flex justify-between items-center dark:bg-[#30313A] bg-gray-100
+    span
+        @apply text-lg pt-1
+        &.done
+            @apply text-gray-400 line-through

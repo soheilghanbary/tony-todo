@@ -5,9 +5,9 @@ import useTodo from "hooks/useTodo";
 import { useTranslation } from "next-i18next";
 
 const todoItemVariants = {
-  hidden: { opacity: 0.5 },
-  visible: { opacity: 1 },
-  exit: { opacity: 0 },
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0.8 },
 };
 
 const modalVariants = {
@@ -110,7 +110,7 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
           </button>
         </div>
       </motion.li>
-      <AnimatePresence initial={false} exitBeforeEnter>
+      {/* <AnimatePresence initial={false} exitBeforeEnter>
         {showModal && (
           <motion.div
             variants={backdropVariants}
@@ -152,7 +152,7 @@ const TodoItem: FC<TodoProps> = ({ text, id, isComplete }) => {
             </motion.form>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </>
   );
 };

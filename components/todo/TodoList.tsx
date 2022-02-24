@@ -43,7 +43,7 @@ const TodoList: FC = () => {
         <FilterSelect items={filterItems} onChange={selectHandler} />
         <span className="block dark:text-gray-300">Todos {todos.length}</span>
       </div>
-      <motion.ul layout className="todo__list">
+      <motion.ul className="todo__list">
         <AnimatePresence initial={false} presenceAffectsLayout>
           {!filters.length
             ? todos.map((todo, i) => <TodoItem key={todo.id} {...todo} />)

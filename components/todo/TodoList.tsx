@@ -39,7 +39,7 @@ const TodoList: FC = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center max-w-sm">
+      <div className="flex justify-between items-center max-w-md">
         <FilterSelect items={filterItems} onChange={selectHandler} />
         <span className="block dark:text-gray-300">Todos {todos.length}</span>
       </div>

@@ -58,9 +58,7 @@ export default function Header() {
   const { theme, setTheme } = useTheme();
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
   const router = useRouter();
-
   const { t } = useTranslation()
-
   return (
     <nav
       className="flex items-center justify-between py-8"
